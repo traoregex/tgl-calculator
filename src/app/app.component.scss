@@ -1,0 +1,126 @@
+.page-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: #615d56;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  color: #f4a841;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.screen {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+
+  &__display {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 10rem;
+    border-radius: 7px;
+    background-color: #ad9a78;
+    box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.2);
+  }
+}
+
+.result {
+  text-align: end;
+  padding: 1rem;
+  font-size: 3rem;
+  color: #fae7c5;
+  font-weight: bold;
+}
+
+.typed {
+  color: #fae7c5;
+  font-size: 1.3rem;
+  padding: 1rem;
+  text-align: end;
+  letter-spacing: 2px;
+}
+
+.keyboard {
+  margin-top: 1rem;
+  padding-left: 5vw;
+  padding-right: 5vw;
+
+  &__pad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}
+
+.last {
+  grid-column: span 2;
+  background-color: rgba($color: #f4a841, $alpha: 0.2);
+  border-radius: 30px;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+.key {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:active {
+    background-color: rgba($color: #f4a841, $alpha: 0.2);
+    border-radius: 10px;
+  }
+}
+
+/*
+.keyboard {
+  margin-top: 2rem;
+  &__pad {
+    display: flex;
+    // flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    &--row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .key {
+        padding: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        // background-color: #777;
+        color: #fff;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+      }
+    }
+  }
+}
+*/
+
+.yellow {
+  color: #f4a841 !important;
+}
