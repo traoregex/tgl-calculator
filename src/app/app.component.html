@@ -2,26 +2,26 @@
   <h1 class="main-title">TGL Calculator</h1>
   <div class="screen">
     <div class="screen__display">
-      <h3 class="result">{{ result }}</h3>
+      <h3 [class]="'result'">{{ result }}</h3>
       <h4 class="typed">{{ typed }}</h4>
     </div>
   </div>
   <div class="keyboard">
     <div class="keyboard__pad">
       <div class="key yellow" (click)="getSymbol('c')">AC</div>
-      <div class="key yellow" (click)="getSymbol('+-')">+/-</div>
+      <div class="key yellow" (click)="getSymbol('+-')"></div>
       <div class="key yellow" (click)="getSymbol('%')">%</div>
       <div class="key yellow" (click)="getSymbol('/')">/</div>
 
       <div class="key" (click)="getNumber('7')">7</div>
       <div class="key" (click)="getNumber('8')">8</div>
       <div class="key" (click)="getNumber('9')">9</div>
-      <div class="key yellow" (click)="getSymbol('x')">x</div>
+      <div class="key yellow" (click)="getSymbol('*')">x</div>
 
       <div class="key" (click)="getNumber('4')">4</div>
       <div class="key" (click)="getNumber('5')">5</div>
       <div class="key" (click)="getNumber('6')">6</div>
-      <div class="key yellow">-</div>
+      <div class="key yellow" (click)="getSymbol('-')">-</div>
 
       <div class="key" (click)="getNumber('1')">1</div>
       <div class="key" (click)="getNumber('2')">2</div>
@@ -30,7 +30,7 @@
 
       <div class="key" (click)="getNumber('0')">0</div>
       <div class="key" (click)="getSymbol('.')">.</div>
-      <div class="yellow last">=</div>
+      <div class="yellow last" (click)="getResult()">=</div>
     </div>
   </div>
 </div>

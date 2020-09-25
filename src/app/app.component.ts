@@ -15,15 +15,19 @@ export class AppComponent {
   }
 
   getSymbol(symbol: string) {
-    // if (this.typed) {
-    //   if (symbol !== 'c' && symbol !== '%') {
-    //     switch (symbol) {
-    //       case '+':
-    //     }
-    //     this.typed += symbol;
-    //   }
-    // }
+    if (symbol === 'c') {
+      this.result = '';
+      this.typed = '';
+    } else if (this.typed) {
+      if (symbol !== 'c') {
+        this.typed += symbol;
+      }
+    }
   }
 
-  getResult() {}
+  getResult() {
+    let temp = this.typed.replace('%', '*0.01');
+    this.result = parseFloat(eval(temp)).toFixed(2);
+    this.typed = '';
+  }
 }
