@@ -27,6 +27,7 @@
     border-radius: 7px;
     background-color: #ad9a78;
     box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.2);
+    overflow-wrap: break-word;
   }
 }
 
@@ -34,6 +35,14 @@
   text-align: end;
   padding: 1rem;
   font-size: 3rem;
+  color: #fae7c5;
+  font-weight: bold;
+}
+
+.smaller-font {
+  text-align: end;
+  padding: 1rem;
+  font-size: 2rem;
   color: #fae7c5;
   font-weight: bold;
 }

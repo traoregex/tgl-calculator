@@ -2,7 +2,7 @@
   <h1 class="main-title">TGL Calculator</h1>
   <div class="screen">
     <div class="screen__display">
-      <h3 [class]="'result'">{{ result }}</h3>
+      <h3 [class]="longNumber ? 'smaller-font' : 'result'">{{ result }}</h3>
       <h4 class="typed">{{ typed }}</h4>
     </div>
   </div>

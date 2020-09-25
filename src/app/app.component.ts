@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   result = '';
   typed = '';
-  passedFirst: boolean;
+  longNumber: boolean;
 
   getNumber(number: string) {
     this.typed += number;
@@ -27,7 +27,15 @@ export class AppComponent {
 
   getResult() {
     let temp = this.typed.replace('%', '*0.01');
-    this.result = parseFloat(eval(temp)).toFixed(2);
+    let temp2 = parseFloat(eval(temp)).toFixed(2);
+    let num = 0;
+    for (let count of temp2) {
+      num += 1;
+    }
+    if (num > 12) {
+      this.longNumber = true;
+    }
+    this.result = temp2;
     this.typed = '';
   }
 }
